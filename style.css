@@ -1,0 +1,24 @@
+body{
+    color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+body div {
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    border-top: 2px solid #f30707;
+    background-color: rgb(71, 48, 48);
+    color: white;
+    text-indent: 30px;
+    text-align: justify;
+    padding: 30px;
+    margin: 0 auto;
+    hyphens: auto;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+h1{
+    color: black;
+    text-align: center;
+}
