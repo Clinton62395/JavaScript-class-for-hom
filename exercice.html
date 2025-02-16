@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+
+<body>
+
+    <a href="exercis in js.html">About JS </a>
+    <a href="index.html">introduction of JS</a>
+    <a href="exercice.html">Js operators learning</a>#
+    
+    <h1>My Personal Information</h1>
+    <p id="info"></p>
+    <button onclick="clickMe()">Click to see more</button>
+
+    <script>
+        const informationAboutMySelf = {
+            Myfullname: "Billy Doumbouya",
+            Nickname: "Clinton",
+            age: 25,
+            country: "Guinea",
+            PhoneNumber: "623952011",
+            Email: "billydoumbouya5210@gmail.com",
+            civilStatus: "single",
+            academicLevel: "Bachelor",
+        };
+
+        console.log(informationAboutMySelf);
+
+        function clickMe() {
+            document.getElementById("info").innerHTML = `
+                My name is:${informationAboutMySelf.Myfullname}. I can also be called: ${informationAboutMySelf.Nickname}.
+                I am: ${informationAboutMySelf.age} years old. I am from ${informationAboutMySelf.country}.
+                I can be contacted through: ${informationAboutMySelf.PhoneNumber} or by email at: ${informationAboutMySelf.Email}.
+                I am ${informationAboutMySelf.civilStatus}. Finally, I graduated with a ${informationAboutMySelf.academicLevel} degree.
+            `;
+            alert("you are about de read about my personal information, are you sure do you want to continue?");
+        }
+
+
+
+        const listOfDayOfTheWeek = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ]
+        console.log(listOfDayOfTheWeek);
+        const theWholedate = new Date().getUTCDay();
+
+        const currentDate = listOfDayOfTheWeek[theWholedate];
+        console.log(currentDate);
+
+
+
+        let age = 30;
+        let country = "Guinea";
+        let civilStatus = "single";
+        let academicLevel = "Master";
+
+        //Comparison Operators
+        // Comparison operators are used to compare two values and return a boolean(true or false).
+        // They are used in conditions to determine the relationship between values.Common comparison
+        //  operators include:
+
+        let a = 5;
+        let b = 10;
+
+        console.log(a > b);
+        console.log(a < b);
+        console.log(a === 5);
+        console.log(b !== 10);
+
+        // Logical Operators
+        // Logical operators are used to combine multiple boolean expressions or conditions.
+        //  They help in creating complex conditionals by combining multiple comparisons. 
+        // Common logical operators include:
+
+        let x = true;
+        let y = false;
+
+        console.log(x && y);
+        console.log(x || y);
+        console.log(!x);
+
+        // Combining Both Types of Operators
+
+        let billyAge = 30;
+        let hasJob = true;
+        let hasDegree = "Bachelor";
+
+        if (billyAge > 25 && hasJob && (hasDegree === "Bachelor" || hasDegree === "Master")) {
+            console.log("billy meets the criteria.");
+        } else {
+            console.log("billy does not meet the criteria.");
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
