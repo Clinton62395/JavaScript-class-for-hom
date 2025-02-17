@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="exercis in js.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            box-sizing: border-box;
+            background-image: url(https://www.codenameone.com/img/blog/css-header.jpg);
+            background-size: cover;
+            z-index: -1;
+            animation: animation 15s linear infinite alternate;
+        }
+
+        @keyframes animation {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -100% 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <a href="exercis in js.html">About JS </a>
     <a href="index.html">introduction of JS</a>
     <a href="exercice.html">Js operators learning</a>
-    
+
     <div class="contener">
         <div class="sub-contener animation1">
             <h1>the Five ways to display JS Code</h1>
@@ -46,7 +66,7 @@
         <div class="sub-contener animation2">
             <h1>ten reserved JS keyword and their action</h1>
             <ol>
-                <li>  <b>break:</b> <br>
+                <li> <b>break:</b> <br>
                     The break statement is used to terminate a loop, switch, or label statement. When encountered, the
                     control of the program moves out of the loop.
                 </li>
@@ -90,7 +110,8 @@
             <ul>
                 <li> <b>Variable Declaration:</b> <br> All three (let, var, const) are used to declare variables.
                 </li>
-                <li><b>Storing Any Data Type: </b> <br> They can store any type of data, including strings, numbers, objects,
+                <li><b>Storing Any Data Type: </b> <br> They can store any type of data, including strings, numbers,
+                    objects,
                     arrays, etc.
                 </li>
             </ul>
@@ -98,7 +119,7 @@
             <ul>
                 <li> <b>let:</b> <br>
                     Has block scope. It is only accessible within the block (e.g., { ... }) it is declared.
-                     <b>let:</b> Cannot be re-declared within the same scope. <br>
+                    <b>let:</b> Cannot be re-declared within the same scope. <br>
                 </li>
 
                 <li> <b>var:</b><br>
@@ -107,7 +128,7 @@
                 </li>
                 <li><b>const:</b> <br>
                     Has block scope, similar to let. It is only accessible within the block it is declared.
-                     <b>const:</b>Cannot be re-declared within the same scope. <br>
+                    <b>const:</b>Cannot be re-declared within the same scope. <br>
                 </li>
             </ul>
         </div>
