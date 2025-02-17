@@ -25,44 +25,66 @@
                 background-position: -100% 0;
             }
         }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            border: non solid black;
+            background-color: wheat;
+            margin: 10px 10px;
+            padding: 5px 10px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+
+        a:hover {
+            color: red;
+            background-color: black;
+            text-decoration: underline;
+
+        }
     </style>
 </head>
 
 <body>
     <a href="exercis in js.html">About JS </a>
     <a href="index.html">introduction of JS</a>
-    <a href="exercice.html">Js operators learning</a>       
-        
-        <div class="sub-contener animation3">
+    <a href="exercice.html">Js operators learning</a>
+    <a href="Js display.html">display Methods</a>
+    <a href="kewords.html">kewords</a>
+    <a href="variable.html">Variables</a>
 
-            <h1>What are the differences and similarities between let, var and const?</h1>
+    <div class="sub-contener animation3">
 
-            <p>Similarities</p>
-            <ul>
-                <li> <b>Variable Declaration:</b> <br> All three (let, var, const) are used to declare variables.
-                </li>
-                <li><b>Storing Any Data Type: </b> <br> They can store any type of data, including strings, numbers,
-                    objects,
-                    arrays, etc.
-                </li>
-            </ul>
-            <p>Differences</p>
-            <ul>
-                <li> <b>let:</b> <br>
-                    Has block scope. It is only accessible within the block (e.g., { ... }) it is declared.
-                    <b>let:</b> Cannot be re-declared within the same scope. <br>
-                </li>
+        <h1>What are the differences and similarities between let, var and const?</h1>
 
-                <li> <b>var:</b><br>
-                    Has function scope. It is accessible anywhere within the function it is declared.
-                    <b>var and let: </b>Can be assigned new values after their initial declaration. <br>
-                </li>
-                <li><b>const:</b> <br>
-                    Has block scope, similar to let. It is only accessible within the block it is declared.
-                    <b>const:</b>Cannot be re-declared within the same scope. <br>
-                </li>
-            </ul>
-        </div>
+        <p>Similarities</p>
+        <ul>
+            <li> <b>Variable Declaration:</b> <br> All three (let, var, const) are used to declare variables.
+            </li>
+            <li><b>Storing Any Data Type: </b> <br> They can store any type of data, including strings, numbers,
+                objects,
+                arrays, etc.
+            </li>
+        </ul>
+        <p>Differences</p>
+        <ul>
+            <li> <b>let:</b> <br>
+                Has block scope. It is only accessible within the block (e.g., { ... }) it is declared.
+                <b>let:</b> Cannot be re-declared within the same scope. <br>
+            </li>
+
+            <li> <b>var:</b><br>
+                Has function scope. It is accessible anywhere within the function it is declared.
+                <b>var and let: </b>Can be assigned new values after their initial declaration. <br>
+            </li>
+            <li><b>const:</b> <br>
+                Has block scope, similar to let. It is only accessible within the block it is declared.
+                <b>const:</b>Cannot be re-declared within the same scope. <br>
+            </li>
+        </ul>
+    </div>
 
     </div>
 </body>
