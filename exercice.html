@@ -76,10 +76,8 @@
         color: red;
         text-align: center;
         width: fit-content;
-    }
-    p{
-        
-    }
+    }      
+    
     .paragraph{
         font-size: 30px;
         text-align: justify;
@@ -111,7 +109,7 @@
 
     <a href="exercis in js.html">Introduction </a>
     <a href="index.html">History of js</a>
-    <a href="exercice.html">display Methods</a>#
+    <a href="exercice.html">display Methods</a>
 
     
     <code class="mycode">
@@ -125,6 +123,15 @@
             &nbsp; civilStatus: "single", <br>
             &nbsp; academicLevel: "Bachelor",  <br>
         }; <br>
+
+        function clickMe() { <br>
+            document.getElementById("info").innerHTML = ` <br>
+                My name is:${informationAboutMySelf.Myfullname}. I can also be called: ${informationAboutMySelf.Nickname}. <br>
+                I am: ${informationAboutMySelf.age} years old. I am from ${informationAboutMySelf.country}. <br>
+                I can be contacted through: ${informationAboutMySelf.PhoneNumber} or by email at: ${informationAboutMySelf.Email}. <br>
+                I am ${informationAboutMySelf.civilStatus}. Finally, I graduated with a ${informationAboutMySelf.academicLevel} degree. <br>
+            `; <br>
+        }
     </code>
     <h1>My Personal Information</h1>
     <p id="info"></p>
@@ -189,7 +196,6 @@
                 I can be contacted through: ${informationAboutMySelf.PhoneNumber} or by email at: ${informationAboutMySelf.Email}.
                 I am ${informationAboutMySelf.civilStatus}. Finally, I graduated with a ${informationAboutMySelf.academicLevel} degree.
             `;
-            alert("you are about de read about my personal information, are you sure do you want to continue?");
         }
 
 
