@@ -45,19 +45,19 @@ p {
 }
 
 .sub-contener {
-  width: 50%;
-  height: 50%;
+  width: 80%;
   background-color: rgb(179, 179, 223);
   cursor: pointer;
   border: none;
   border-radius: 10px;
   text-decoration: none;
   margin: 10px 20px;
-  padding: 0 10px;
+  padding: 10px 10px;
   line-height: 1.5;
-  word-wrap: break-word;
   box-shadow: 10px 10px 5px #a8dda6;
   border-left: 10px solid #a8dda6;
+  border-top: 10px solid #a8dda6;
+
 }
 .animation1 {
   background: linear-gradient(45deg, cyan, magenta);
