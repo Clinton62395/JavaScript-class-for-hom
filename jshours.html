@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click on ma page to be greeted with current time</title>
+</head>
+<body>
+    <script>
+         //Time should be showed when the page is loading
+
+         let userName = prompt("hello what is your name");
+        let currentHours = new Date().getHours();
+        let currentTimes;
+
+        if (currentHours < 12) {
+            currentTimes = "good Morning";
+        } 
+
+        else if (currentHours < 18) {
+            currentTimes = "good Afternoon";
+        } 
+        else if (currentHours < 23) {
+            currentTimes = "good Evening";
+        }
+
+        else if (currentHours > 23){
+            currentTimes = "good Night";
+        }
+        console.log(currentTimes);
+
+        alert(`${userName} It is currently :${currentHours}h: ${currentTimes}`);
+
+        document.write(`${userName} It is currently :${currentHours}h: ${currentTimes}`)
+    </script>
+</body>
+</html>

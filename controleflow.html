@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contro flow in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Create candidate objects for my application
+
+        let Candidate = prompt("graduate or ungraduate");
+        let candidateAge = prompt("how old are you? ");
+        let CandidateStatus;
+
+        if (!Candidate && !candidateAge) {
+            CandidateStatus = "you are not allowed to apply";
+        }
+
+        else if (candidateAge < 18) {
+            CandidateStatus = "you should still be in school";
+        }
+        else if (candidateAge > 50) {
+            CandidateStatus = "too old to apply";
+        }
+        else if (Candidate == "graduate" && candidateAge >= 35) {
+            CandidateStatus = "you can apply for branch manager";
+        }
+        else if (Candidate == "graduate" && candidateAge > 28 && candidateAge < 50) {
+            CandidateStatus = "you can apply for operation manager";
+        }
+        else if (Candidate == "graduate" || candidateAge > 25 && candidateAge < 28) {
+            CandidateStatus = "you can apply for training";
+        }
+
+        console.log(CandidateStatus);
+        document.write(`${CandidateStatus}`);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
