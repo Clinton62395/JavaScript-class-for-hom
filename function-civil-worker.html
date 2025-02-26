@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the civil worker retirement</title>
+
+</head>
+<body>
+    <script>
+        function retirementStatus(userAge){
+            let  retirementAge = userAge + 65;
+            let currentYear = new Date().getFullYear();
+            let leftYear = currentYear - retirementAge;
+
+            if (leftYear > 1);
+            return ``;
+        } else if (leftYear ===1){
+            return ``;
+
+        }else if (leftYear === 0){
+            return ``;
+        }else if (leftYear === -1){
+            return ``;
+        } else if (leftYear <1){
+            return ``;
+        }
+
+        let userAge = prompt(" please enter your birth date");
+        document.write(retirementStatus(userAge));
+    </script>
+</body>
+</html>

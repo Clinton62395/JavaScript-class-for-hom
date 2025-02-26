@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ten reserved JS keyword and their action</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <style>
     body {
@@ -49,60 +51,82 @@
         border-left: 10px solid #a8dda6;
         border-top: 10px solid #a8dda6;
     }
+    /* navbar styling */
+    .navbar {
+            background: linear-gradient(rgba(211, 18, 18, 0.5), rgba(7, 60, 173, 0.5)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4aBp7s-_hM7I_Lm9oOql64aC8SBZCfoHpg&s');
+            background-size: cover;
+            border: 5px ridge black;
+        }
 
-    a {
-        color: blue;
-        text-decoration: none;
-        transition: color 0.5s ease;
-        border: non solid black;
-        background-color: wheat;
-        padding: 10px 10px;
-        font-size: 25px;
-        border-radius: 20px;
-    }
+        .nav-link:hover {
+            background-color: #140401;
+            color: blue;
+            text-decoration: underline;
+        }
 
-    a:hover {
-        color: red;
-        background-color: black;
-        text-decoration: underline;
-    }
+        .dropdown-item {
+            background-color: #343a40;
+            color: white;
+        }
 
-    
-    nav {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        padding: 20px;
-        border: none;
-        border-radius: 10px;
-        background-color: purple;
-    }
+        ;
 
-    nav a {
-        padding: 10px;
-        background-color: #f4f4f4;
-        margin: 5px 0;
-        cursor: pointer;
-    }
+        .dropdown-item:hover {
+            background-color: #9c3826;
+            color: blue;
+            text-decoration: underline;
+        }
+
+
+  
 
 </style>
 
 <body>
-    <nav>
-        <a href="index.html">Introduction of JS</a>
-        <a href="exercis-in-js.html">About JS</a>
-        <a href="exercice.html">JS operators learning</a>
-        <a href="js-display.html">Display Methods</a>
-        <a href="keywords.html">Keywords</a>
-        <a href="variables.html">Variables</a>
-        <a href="b-boostr.html">Introduction to Bootstrap</a>
-        <a href="jshours.html">Time</a>
+    <!-- My navbar for my differents pages -->
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" aria-current="page"
+                            href="index.html">Introduction to javascrip</a>
+                    </li>
+
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="my-links.html" text-light fs-3
+                            fw-bold>Form</a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="b-assignment.html">Bootsrap Modal and
+                            Accordeon</a>
+                    </li>
+                    <li class="nav-item dropdown m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn more
+                        </a>
+                        <ul class="dropdown-menu bg-success">
+                            <li><a class="dropdown-item" href="b-boostr.html">Introduction to Bootsrape</a></li>
+                            <li><a class="dropdown-item" href="b-buton-alert-tabs-modal.html">some Bootsrape
+                                    components</a></li>
+                            <li><a class="dropdown-item" href="controleflow.html">JavaScript controleflow</a></li>
+                            <li><a class="dropdown-item" href="exercice.html">JavaScript Assignment</a></li>
+                            <li><a class="dropdown-item" href="fonction-assignment.html">retirement by JS 2</a></li>
+                            <li><a class="dropdown-item" href="function-civil-worker.html">retirement by JS 2</a></li>
+                            <li><a class="dropdown-item" href="js-display.html">JS display</a></li>
+                            <li><a class="dropdown-item" href="kewords.html">JS kewords</a></li>
+                            <li><a class="dropdown-item" href="variables.html">JS Variables</a></li>
+                            <li><a class="dropdown-item" href="jshours.html">Clik to see Time</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-
     <div class=" keyword animation2">
         <h1>ten reserved JS keyword and their action</h1>
         <ol>
@@ -142,6 +166,8 @@
         </ol>
         <p>These keywords are essential to understanding and writing JavaScript code effectively.</p>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

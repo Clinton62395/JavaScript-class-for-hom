@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click on ma page to be greeted with current time</title>
+    <title>Regulation of retirement</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <style>
-    body {
+        body {
         font-family: "Times New Roman", Times, serif;
         box-sizing: border-box;
         background-image: url(https://www.codenameone.com/img/blog/css-header.jpg);
@@ -27,8 +26,7 @@
             background-position: -100% 0;
         }
     }
-
-    h1 {
+     h1 {
         background-color: black;
         color: yellow;
         text-align: center;
@@ -62,10 +60,10 @@
             text-decoration: underline;
         }
 
+
 </style>
 
 <body>
-
     <!-- My navbar for my differents pages -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
@@ -110,35 +108,51 @@
         </div>
     </nav>
 
-    <h1>Click on my page to see time </h1>
+    <h1 id="retirement"></h1>
+    <script>
+        // function retirementStatus(civilAge){
+        //     let retirementYear = civilAge + 65;
+        //     let currentYear = new Date().getFullYear();
+        //     if(retirementYear > currentYear){
+        //         return `you have not retired yet in ${currentYear} your retirement date remains  ${retirementYear - currentYear}`;
+        //     }else if(retirementYear === currentYear){
+        //         return `you are retiring in this ${currentYear-retirementYear} years`;
+        //     } else if (retirementYear < currentYear) {
+        //         return `you have already retired there is ${currentYear - retirementYear} years ago`;
+        //     }
+        // }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-        //Time should be showed when the page is loading
 
-        let userName = prompt("hello what is your name");
-        let currentHours = new Date().getHours();
-        let currentTimes;
+        // let civilBirth = prompt( "Please enter, when were you born");
+        // document.write(retirementStatus (parseInt(civilBirth)));
 
-        if (currentHours < 12) {
-            currentTimes = "good Morning";
+
+
+        function departSituation(birth) {
+            let retirementTime = birth + 65;
+            let acctualYear = new Date().getFullYear();
+            let leftYear = retirementTime - acctualYear;
+
+            if (leftYear > 1) {
+                return `you will retire in ${retirementTime} years your retirement remains ${leftYear} years`;
+            }
+            else if (leftYear === 0) {
+                return `you are retiring in this ${acctualYear} year`;
+            }
+            else if (leftYear === -1) {
+                return `You ought to have retired last year`;
+            }
+            else {
+                return `You ought to have retired ${acctualYear} years ago`
+            }
         }
 
-        else if (currentHours < 18) {
-            currentTimes = "good Afternoon";
-        }
-        else if (currentHours < 23) {
-            currentTimes = "good Evening";
-        }
-
-        else if (currentHours > 23) {
-            currentTimes = "good Night";
-        }
-        console.log(currentTimes);
-
-        alert(`${userName} It is currently :${currentHours}h: ${currentTimes}`);
-
-        document.write(`${userName} It is currently :${currentHours}h: ${currentTimes}`)
+        let birth = prompt("Please enter, when were you born");
+        let retirementSituation = departSituation(parseInt(birth));
+        document.getElementById(retirement).innerHTML = departSituation(parseInt(birth));
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

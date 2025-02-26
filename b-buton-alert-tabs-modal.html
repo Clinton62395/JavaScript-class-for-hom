@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootsrape Button Alert Dissemble Tabs Modal ( colapse accordion)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+">
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      box-sizing: border-box;
+      background-image: url(https://www.codenameone.com/img/blog/css-header.jpg);
+      background-size: cover;
+      z-index: -1;
+      animation: animation 15s linear infinite alternate;
+    }
+
+    @keyframes animation {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -100% 0;
+      }
+    }
+
+    h1 {
+      background-color: black;
+      color: yellow;
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    /* navbar styling */
+    .navbar {
+            background: linear-gradient(rgba(211, 18, 18, 0.5), rgba(7, 60, 173, 0.5)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4aBp7s-_hM7I_Lm9oOql64aC8SBZCfoHpg&s');
+            background-size: cover;
+            border: 5px ridge black;
+        }
+
+        .nav-link:hover {
+            background-color: #140401;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .dropdown-item {
+            background-color: #343a40;
+            color: white;
+        }
+
+        ;
+
+        .dropdown-item:hover {
+            background-color: #9c3826;
+            color: blue;
+            text-decoration: underline;
+        }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- My navbar for my differents pages -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
+    <div class="container-fluid">
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" aria-current="page" href="index.html">Introduction to
+              javascrip</a>
+          </li>
+
+          <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="my-links.html" text-light fs-3 fw-bold>Form</a>
+          </li>
+          <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="b-assignment.html">Bootsrap Modal and
+              Accordeon</a>
+          </li>
+          <li class="nav-item dropdown m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Learn more
+            </a>
+            <ul class="dropdown-menu bg-success">
+              <li><a class="dropdown-item" href="b-boostr.html">Introduction to Bootsrape</a></li>
+              <li><a class="dropdown-item" href="b-buton-alert-tabs-modal.html">some Bootsrape
+                  components</a></li>
+              <li><a class="dropdown-item" href="controleflow.html">JavaScript controleflow</a></li>
+              <li><a class="dropdown-item" href="exercice.html">JavaScript Assignment</a></li>
+              <li><a class="dropdown-item" href="fonction-assignment.html">retirement by JS 2</a></li>
+              <li><a class="dropdown-item" href="function-civil-worker.html">retirement by JS 2</a></li>
+              <li><a class="dropdown-item" href="js-display.html">JS display</a></li>
+              <li><a class="dropdown-item" href="kewords.html">JS kewords</a></li>
+              <li><a class="dropdown-item" href="variables.html">JS Variables</a></li>
+              <li><a class="dropdown-item" href="jshours.html">Clik to see Time</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- colapse -->
+
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+      aria-expanded="false" aria-controls="collapseExample">
+      Button with data-bs-target
+    </button>
+  </p>
+  <div class="collapse collapse-horizontal" id="collapseExample">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the
+      user activates the relevant trigger.
+    </div>
+  </div>
+
+  <!-- Alert -->
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  <div class="alert alert-secondary" role="alert">
+    A simple secondary alert—check it out!
+  </div>
+  <div class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+  <div class="alert alert-warning" role="alert">
+    A simple warning alert—check it out!
+  </div>
+  <div class="alert alert-info" role="alert">
+    A simple info alert—check it out!
+  </div>
+  <div class="alert alert-light" role="alert">
+    A simple light alert—check it out!
+  </div>
+  <div class="alert alert-dark" role="alert">
+    A simple dark alert—check it out!
+  </div>
+
+  <!-- Accordeon   use ofsen whit FAQ -->
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
+          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+          overriding our default variables. It's also worth noting that just about any HTML can go within the
+          <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+        "></script>
+</body>
+
+</html>
