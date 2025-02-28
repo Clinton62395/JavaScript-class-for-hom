@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (doucument object module)</title>
+</head>
+<style>
+    .billy{
+        background-color: black;
+        font-family: 30px;
+        color: yellow;
+    }
+</style>
+<body>
+    <h1 >Introduction to DOM javascrip</h1>
+
+    <button onclick="changeColorPage()">darkMode</button>
+    <button onclick="changeColor()">ligthMode</button>
+    
+
+    <script>
+        function changeColorPage(){
+            let darkMode = document.querySelector("body");
+            darkMode.classList.add("billy");
+        }
+        function changeColor(){
+            let ligthMode = document.querySelector("body");
+            ligthMode.classList.remove("billy");
+        }
+       
+
+    </script>
+</body>
+</html>

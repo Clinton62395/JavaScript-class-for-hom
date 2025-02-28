@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regulation of retirement</title>
+    <title>Calculation by javascrip using</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
-        body {
+    body {
         font-family: "Times New Roman", Times, serif;
         box-sizing: border-box;
         background-image: url(https://www.codenameone.com/img/blog/css-header.jpg);
@@ -26,22 +26,52 @@
             background-position: -100% 0;
         }
     }
-     h1 {
-        background-color: black;
-        color: yellow;
+
+    h1 {
+        color: white;
         text-align: center;
-        margin: 20px auto;
+        margin: 30px   auto;
+        padding: 10px;
+        background-color: rgba(236, 53, 53, 0.7);
+    }
+
+    input[type="number"] {
+        width: 100%;
         padding: 10px;
     }
-    /* navbar styling */
+
+    button {
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    #mybirth {
+        color: white;
+        text-align: center;
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        margin: 10px 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .resul {
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    /* nav-bar style */
     .navbar {
             background: linear-gradient(rgba(211, 18, 18, 0.5), rgba(7, 60, 173, 0.5)),
                 url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr4aBp7s-_hM7I_Lm9oOql64aC8SBZCfoHpg&s');
             background-size: cover;
             border: 5px ridge black;
         }
-
-        .nav-link:hover {
+    .nav-link:hover {
             background-color: #140401;
             color: blue;
             text-decoration: underline;
@@ -59,13 +89,10 @@
             color: blue;
             text-decoration: underline;
         }
-
-
 </style>
 
 <body>
-    <!-- My navbar for my differents pages -->
-
+    <!-- Nav-bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
         <div class="container-fluid">
 
@@ -114,52 +141,101 @@
         </div>
     </nav>
 
-    <h1 id="retirement"></h1>
-    <script>
-        // function retirementStatus(civilAge){
-        //     let retirementYear = civilAge + 65;
-        //     let currentYear = new Date().getFullYear();
-        //     if(retirementYear > currentYear){
-        //         return `you have not retired yet in ${currentYear} your retirement date remains  ${retirementYear - currentYear}`;
-        //     }else if(retirementYear === currentYear){
-        //         return `you are retiring in this ${currentYear-retirementYear} years`;
-        //     } else if (retirementYear < currentYear) {
-        //         return `you have already retired there is ${currentYear - retirementYear} years ago`;
-        //     }
-        // }
+
+    <div class="row container">
+        <h1>calculator</h1>
+
+        <div class="col-3 lg bg-primary">
+            <h2>RETIREMENT CALCULATOR</h2>
+
+            <input type="number" name="retirement-calculator" placeholder="enter your birth" id="birth"><br><br>
+            <button onclick="calculateAge()">calculate when to retire</button>
+            <p class="resul"><span id="mybirth"></span></p>
 
 
-        // let civilBirth = prompt( "Please enter, when were you born");
-        // document.write(retirementStatus (parseInt(civilBirth)));
+        </div>
+
+        <div class="col-3 lg bg-success">
+            <h2>Simple Calculator</h2>
+            <input type="number" name="simple-calculator" placeholder="enter your figure" id="cal1"><br><br>
+            <input type="number" name="simple-calculator" placeholder="enter your figure" id="cal2"><br>
+
+            <button onclick="add()">+</button>
+            <button onclick="subst()">-</button>
+            <button onclick="mult()">*</button>
+            <button onclick="division()">/</button>
+            <button onclick="modul()">%</button>
+            <p class="resul">Result: <span id="result"></span></p>
 
 
 
-        function departSituation(birth) {
-            let retirementTime = birth + 65;
-            let acctualYear = new Date().getFullYear();
-            let leftYear = retirementTime - acctualYear;
+        </div>
 
-            if (leftYear > 1) {
-                return `you will retire in ${retirementTime} years your retirement remains ${leftYear} years`;
-            }
-            else if (leftYear === 0) {
-                return `you are retiring in this ${acctualYear} year`;
-            }
-            else if (leftYear === -1) {
-                return `You ought to have retired last year`;
-            }
-            else {
-                return `You ought to have retired ${acctualYear} years ago`
-            }
-        }
+        <!-- <div class="col-3 lg bg-danger">
 
-        let birth = prompt("Please enter, when were you born");
-        let retirementSituation = departSituation(parseInt(birth));
-        alert(departSituation (parseInt(birth)));
-        document.getElementById(retirement).innerHTML = departSituation(parseInt(birth));
-    </script>
+        </div>
+
+        <div class="col-3 lg bg-info">
+
+        </div> -->
+
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateAge() {
+            let birthYear = parseInt(document.getElementById('birth').value);
+            let currentYear = new Date().getFullYear();
+            let age = birthYear + 65 - currentYear; `you `
+            if (!birthYear) {
+                return false
+            }
+            else if (birthYear > currentYear) {
+                return `you have not retired yet in ${currentYear} your retirement date remains  ${birthYear - currentYear}`;
+            } else if (retirementYear === currentYear) {
+                return `you are retiring in this ${birthYear - currentYear} years`;
+            } else if (retirementYear < currentYear) {
+                return `you have already retired from ${birthYear - currentYear} years ago`;
+            }
+            document.getElementById('mybirth').innerHTML = ` retirement remains: <h1>${age}</h1> years`;
+
+        }
+
+
+
+        function add() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 + num2;
+            document.getElementById('result').innerText = result;
+        }
+        function subst() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 - num2;
+            document.getElementById('result').innerText = result;
+        }
+        function mult() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 * num2;
+            document.getElementById('result').innerText = result;
+        }
+        function division() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 / num2;
+            document.getElementById('result').innerText = result;
+        }
+        function modul() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 % num2;
+            document.getElementById('result').innerText = result;
+
+        }
+    </script>
 </body>
 
 </html>

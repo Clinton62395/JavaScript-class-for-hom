@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-bar using</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- cdn bootsrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .logo {
+            width: 100%;
+            height: 40px;
+
+        }
+
+        .text-color li a {
+            color: white;
+            font-size: 25px;
+        }
+
+        .item-dropdown {
+            background-color: #343a40;
+            padding: 10px;
+        }
+        /* offcanva */
+        .intemdropdown{
+            color: white;
+        }
+
+        /* offcanva styling */
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav-bar -->
+
+    <nav class="navbar navbar-expand-lg " style="background-color: purple;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="cltin.webp" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 text-color">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="calculator.html">
+                            Calculators</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu item-dropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                style="width: 20px;height: 20px;border-radius: 50%;background-color: red;" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                style="width: 20px;height: 20px;border-radius: 50%;background-color: red;"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                style="width: 20px;height: 20px;border-radius: 50%;background-color: red;"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="cltin.webp" class="d-block w-100" style="height: 300px;" alt="logo">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="stb.png" class="d-block w-100" style="height: 300px;" alt="image">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="shopping.webp" class="d-block w-100" style="height: 300px;" alt="image">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="bi bi-caret-left-fill" style="color: red;font-size: 50px;"></i>
+
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="bi bi-caret-right-fill" style="color: red;font-size: 50px;"></i>
+        </button>
+    </div>
+
+    <!-- OffCanva -->
+
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        About Us
+    </a>
+    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button> -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header" style="background-color: yellow;color: black;text-align: center;">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">compagny Tech of Guinea</h5>
+            <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="bi bi-x-octagon"></i>  
+            </button>
+        </div>
+        <div class="offcanvas-body" style="background-color: #343a40;color: rgb(196, 183, 183);">
+            <div style="background-color: #5e07ff; color: wheat;" >
+                welcom to our compagny based on involving technology arond the world. let's keep moving togheder
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" style="background-color: yellow; color: black;">
+                    Information of contacts 
+                </button>
+                <ul class="dropdown-menu" style="background-color: #3795f3;">
+                    <li><a class="dropdown-item intemdropdown" href="#">Social Media</a></li>
+                    <li><a class="dropdown-item intemdropdown" href="#">Adress Email</a></li>
+                    <li><a class="dropdown-item intemdropdown" href="#">Phone number</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
