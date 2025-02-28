@@ -114,7 +114,11 @@
         </div>
     </nav>
 
-    <h1 id="retirement"></h1>
+    <h1>Calculate your age</h1>
+    <input type="number" name="age" placeholder="Please enter your birth" id="mybirth">
+    <button onclick="knownAge()">Clik me to know your age</button>
+    <p id="myage"></p>
+
     <script>
         // function retirementStatus(civilAge){
         //     let retirementYear = civilAge + 65;
@@ -134,29 +138,49 @@
 
 
 
-        function departSituation(birth) {
-            let retirementTime = birth + 65;
-            let acctualYear = new Date().getFullYear();
-            let leftYear = retirementTime - acctualYear;
+        // function departSituation(birth) {
+        //     let retirementTime = birth + 65;
+        //     let acctualYear = new Date().getFullYear();
+        //     let leftYear = retirementTime - acctualYear;
 
-            if (leftYear > 1) {
-                return `you will retire in ${retirementTime} years your retirement remains ${leftYear} years`;
-            }
-            else if (leftYear === 0) {
-                return `you are retiring in this ${acctualYear} year`;
-            }
-            else if (leftYear === -1) {
-                return `You ought to have retired last year`;
-            }
-            else {
-                return `You ought to have retired ${acctualYear} years ago`
-            }
+        //     if (leftYear > 1) {
+        //         return `you will retire in ${retirementTime} years your retirement remains ${leftYear} years`;
+        //     }
+        //     else if (leftYear === 0) {
+        //         return `you are retiring in this ${acctualYear} year`;
+        //     }
+        //     else if (leftYear === -1) {
+        //         return `You ought to have retired last year`;
+        //     }
+        //     else {
+        //         return `You ought to have retired ${acctualYear} years ago`
+        //     }
+        // }
+
+        // let birth = prompt("Please enter, when were you born");
+        // let retirementSituation = departSituation(parseInt(birth));
+        // alert(departSituation (parseInt(birth)));
+        // document.getElementById(retirement).innerHTML = departSituation(parseInt(birth));
+
+        // // to work on later
+        // // function calculateAge() {
+        // //     let birthYear =parseInt(document.getElementById('birth').value);
+        // //     let currentYear = new Date().getFullYear();
+        // //     let age = birthYear + 65 - currentYear  ;
+        // //     document.getElementById('mybirth').innerHTML =` retirement remains: <h1>${age}</h1> years`;
+        // // }
+
+
+        function myAge() {
+            let birthYear = parseFloat(document.getElementById('mybirth').value);
+            currentYear = new Date().getFullYear();
+            let age = currentYear - birthYear;
+            return ` your age is ${age} years`;
+        }
+        function knownAge() {
+            document.getElementById('myage').innerText = myAge();
         }
 
-        let birth = prompt("Please enter, when were you born");
-        let retirementSituation = departSituation(parseInt(birth));
-        alert(departSituation (parseInt(birth)));
-        document.getElementById(retirement).innerHTML = departSituation(parseInt(birth));
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
