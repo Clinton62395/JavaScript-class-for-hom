@@ -40,8 +40,11 @@
     }
 
     button {
-        padding: 10px 20px;
-        margin-top: 10px;
+        margin: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
     }
 
     #mybirth {
@@ -115,7 +118,7 @@
         <div class="col-3 lg bg-primary">
             <h2>RETIREMENT CALCULATOR</h2>
 
-            <input type="number" name="retirement-calculator" placeholder="enter your birth" id="birth"><br><br>
+            <input type="number" name="retirement-calculator" placeholder="enter your birth" id="birth"><br>
             <button onclick="displayDepartSituation()">calculate when to retire</button>
             <p id="retirement" style="text-align: center; color: yellow; font-size: 20px;"></p>
 
@@ -132,7 +135,8 @@
             <button onclick="subst()">-</button>
             <button onclick="mult()">*</button>
             <button onclick="division()">/</button>
-            <button onclick="modul()">%</button><br>
+            <button onclick="modul()">%</button>
+            <button onclick="exponent()">**</button><br>
             <p id="result" style="text-align: center; color: yellow; font-size: 20px;"></p>
 
 
@@ -219,6 +223,13 @@
             document.getElementById('result').innerText =  `Total= ${result}`;
             addsymbole.innerText = '%';
 
+        }
+        function exponent() {
+            let num1 = parseFloat(document.getElementById("cal1").value);
+            let num2 = parseFloat(document.getElementById("cal2").value);
+            let result = num1 ** num2;
+            document.getElementById('result').innerText =  `Total= ${result}`;
+            addsymbole.innerText = '**';
 
         }
     </script>
