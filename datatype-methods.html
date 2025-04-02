@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types and their frequently methods used</title>
+</head>
+
+<body>
+     <!-- Contenu de la navbar -->
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item m-3">
+                <a class="nav-link active text-primary fs-3 fw-bold" aria-current="page" href="index.html">
+                    Introduction to JavaScript
+                </a>
+            </li>
+           
+           
+            <li class="nav-item m-3">
+                <a class="nav-link active text-primary fs-3 fw-bold" href="calculator.html">
+                    Calculators
+                </a>
+            </li>
+            <li class="nav-item m-3">
+                <a class="nav-link active text-primary fs-3 fw-bold" href="form-validation.html">
+                    Form
+                </a>
+            </li>
+            <li class="nav-item m-3">
+                <a class="nav-link active text-primary fs-3 fw-bold" href="date.html">
+                    My Schedule
+                </a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown m-3">
+                <a class="nav-link active text-primary fs-3 fw-bold dropdown-toggle" href="#" role="button" 
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Learn more
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="controleflow.html">JavaScript Control Flow</a></li>
+                    <li><a class="dropdown-item" href="exercice.html">JavaScript Assignment</a></li>
+                    <li><a class="dropdown-item" href="fonction-assignment.html">Retirement by JS 2</a></li>
+                    <li><a class="dropdown-item" href="function-civil-worker.html">Retirement by JS 2</a></li>
+                    <li><a class="dropdown-item" href="js-display.html">JS Display</a></li>
+                    <li><a class="dropdown-item" href="kewords.html">JS Keywords</a></li>
+                    <li><a class="dropdown-item" href="variables.html">JS Variables</a></li>
+                    <li><a class="dropdown-item" href="jshours.html">Click to see Time</a></li>
+                    <li><a class="dropdown-item" href="datatype-methods.html">Click to see Time</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+    <h1> Méthodes Math en JavaScript</h1>
+    <p>JavaScript fournit des méthodes pour manipuler des données numériques, notamment les nombres entiers, les nombres
+
+    <h2>1. Math.abs(x)</h2>
+
+    <p>console.log(Math.abs(-10)); // 10
+        console.log(Math.abs(5)); // 5
+        console.log(Math.abs(0)); // 0
+    </p>
+
+
+    <h2>2. Math.ceil(x)</h2>
+    <p>console.log(Math.ceil(4.2)); // 5
+        console.log(Math.ceil(7.8)); // 8
+        console.log(Math.ceil(-2.7)); // -2
+    </p>
+
+    <h2>3. Math.floor(x)</h2>
+    <p>
+        console.log(Math.floor(4.9)); // 4
+        console.log(Math.floor(7.1)); // 7
+        console.log(Math.floor(-2.9)); // -3
+
+    </p>
+
+    <h2>4. Math.max(b, c, d)</h2>
+    <p>
+        console.log(Math.max(10, 50, 30)); // 50
+        console.log(Math.max(10, 50, -30)); // 50
+    </p>
+
+    <h2>5. Math.min(b, c, d)</h2>
+    <p>
+        console.log(Math.min(10, 50, 30)); // 10
+        console.log(Math.min(10, 50, -30)); // -30
+    </p>
+
+    <h2>6. Math.pow(base, exponent)</h2>
+    <p>
+        console.log(Math.pow(2, 3)); // 2^3 = 8
+        console.log(Math.pow(5, 2)); // 5^2 = 25
+    </p>
+
+    <h2>7. Math.sqrt(x)</h2>
+    <p>
+        console.log(Math.sqrt(16)); // 4
+        console.log(Math.sqrt(9)); // 3
+    </p>
+
+    <h2>8. Math.random() et Math.floor(Math.random() * (max - min + 1)) + min</h2>
+    <p>
+        let randomNum = Math.floor(Math.random() * 10) + 1;
+        console.log(randomNum); // Un nombre entre 1 et 10
+    </p>
+
+    <h2>9. Math.round(x)</h2>
+    <p>
+        console.log(Math.round(4.4)); // 4
+        console.log(Math.round(4.6)); // 5
+    </p>
+
+    <h2>10. Math.trunc(x)</h2>
+    <p>
+        console.log(Math.trunc(4.9)); // 4
+        console.log(Math.trunc(-7.8)); // -7
+    </p>
+
+    <h2>11. Math.sign(x)</h2>
+    <p>
+        console.log(Math.sign(10)); // 1
+        console.log(Math.sign(-5)); // -1
+        console.log(Math.sign(0)); // 0
+    </p>
+
+    <h2>12.Math.exp(x)</h2>
+    <p>
+        console.log(Math.exp(1)); // 2.718281828459045 (≈ e^1)
+        console.log(Math.exp(2)); // 7.389056098930649 (≈ e^2)
+    </p>
+
+    <h2>13. Math.log(x)</h2>
+    <p>
+        console.log(Math.log(1)); // 0
+        console.log(Math.log(Math.E)); // 1
+    </p>
+
+    <h2>14. Math.log10(x)</h2>
+    <p>
+        console.log(Math.log10(1000)); // 3
+        console.log(Math.log10(10)); // 1
+    </p>
+
+    <h2>15. Math.log2(x)</h2>
+    <p>
+        console.log(Math.log2(8)); // 3
+        console.log(Math.log2(1024)); // 10
+    </p>
+
+    <h2> 16. Math.cbrt(x) </h2>
+    <p>
+        console.log(Math.cbrt(27)); // 3
+        console.log(Math.cbrt(8)); // 2
+    </p>
+
+    <h2>17. Math.hypot(x, y, z)</h2>
+    <p>
+        console.log(Math.hypot(3, 4)); // 5 (car 3² + 4² = 5²)
+        console.log(Math.hypot(6, 8)); // 10
+    </p>
+
+    <h2>18. Math.imul(a, b)</h2>
+    <p>
+        console.log(Math.imul(5, 6)); // 30
+        console.log(Math.imul(10, -5)); // -50
+    </p>
+
+    <h2>19. Math.fround(x)</h2>
+    <p>
+        console.log(Math.fround(4.5)); // 4.5
+        console.log(Math.fround(4.9)); // 5
+        console.log(Math.fround(-4.5)); // -4
+        console.log(Math.fround(-4.9)); // -5
+    </p>
+
+    <h1>Array</h1>
+
+    <h2>1. push(value)</h2>
+
+    <p>
+        let myArray = [1, 2, 3];
+        myArray.push(4);
+        console.log(myArray); // [1, 2, 3, 4]
+    </p>
+
+    <h2>2. pop()</h2>
+    <p>
+        let myArray = [1, 2, 3, 4];
+        let poppedValue = myArray.pop();
+        console.log(myArray); // [1, 2, 3]
+        console.log(poppedValue); // 4
+    </p>
+
+    <h2>3. shift()</h2>
+    <p>
+        let myArray = [1, 2, 3, 4];
+        let shiftedValue = myArray.shift();
+        console.log(myArray); // [2, 3, 4]
+        console.log(shiftedValue); // 1
+    </p>
+
+    <h2>4. unshift(value)</h2>
+    <p>
+        let myArray = [1, 2, 3];
+        myArray.unshift(0);
+        console.log(myArray); // [0, 1, 2, 3]
+    </p>
+
+    <h2>5. concat(value1, value2,...)</h2>
+    <p>
+        let myArray = [1, 2, 3];
+        let concatArray = myArray.concat([4, 5, 6]);
+        console.log(myArray); // [1, 2, 3]
+        console.log(concatArray); // [1, 2, 3, 4, 5, 6]
+    </p>
+
+    <h2>6. slice(start, end)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        let slicedArray = myArray.slice(1, 4);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+        console.log(slicedArray); // [2, 3, 4]
+    </p>
+
+    <h2>7. splice(start, deleteCount,...items)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        myArray.splice(2, 0, "a", "b", "c");
+        console.log(myArray); // [1, 2, "a", "b", "c", 3, 4, 5]
+    </p>
+
+    <h2>8. reverse()</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        myArray.reverse();
+        console.log(myArray); // [5, 4, 3, 2, 1]
+    </p>
+
+    <h2>9. sort(compareFunction)</h2>
+    <p>
+        let myArray = [5, 1, 4, 2, 3];
+        myArray.sort((a, b) => a - b);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+    </p>
+
+    <h2>10. indexOf(value, fromIndex)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        console.log(myArray.indexOf(3)); // 2
+        console.log(myArray.indexOf(6)); // -1
+    </p>
+
+    <h2>11. lastIndexOf(value, fromIndex)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        console.log(myArray.lastIndexOf(3)); // 2
+        console.log(myArray.lastIndexOf(6)); // -1
+    </p>
+
+    <h2>12. forEach(callbackFn, thisArg)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        myArray.forEach((value, index, array) => {
+            console.log(`Index: ${index}, Value: ${value}, Array: ${array}`);
+        });
+    </p>
+
+    <h2>13. map(callbackFn, thisArg)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        let doubledArray = myArray.map(value => value * 2);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+        console.log(doubledArray); // [2, 4, 6, 8, 10]
+    </p>
+
+    <h2>14. filter(callbackFn, thisArg)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        let evenArray = myArray.filter(value => value % 2 === 0);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+        console.log(evenArray); // [2, 4]
+    </p>
+
+    <h2>15. reduce(callbackFn, initialValue)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        let sum = myArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+        console.log(sum); // 15
+    </p>
+
+    <h2>16. reduceRight(callbackFn, initialValue)</h2>
+    <p>
+        let myArray = [1, 2, 3, 4, 5];
+        let sum = myArray.reduceRight((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(myArray); // [1, 2, 3, 4, 5]
+        console.log(sum); // 15
+    </p>
+
+    <h1>Object</h1>
+
+    <h2>1. Object.assign(target,...sources)</h2>
+    <p>
+        let obj1 = { a: 1, b: 2 };
+        let obj2 = { c: 3, d: 4 };
+        let obj3 = Object.assign({}, obj1, obj2);
+        console.log(obj1); // { a: 1, b: 2 }
+        console.log(obj2); // { c: 3, d: 4 }
+        console.log(obj3); // { a: 1, b: 2, c: 3, d: 4 }
+    </p>
+
+    <h2>2. Object.create(proto [, propertiesObject])</h2>
+    <p>
+        let obj = Object.create({ x: 10 });
+        console.log(obj.x); // 10
+        obj.y = 20;
+        console.log(obj.y); // 20
+    </p>
+
+    <h2>3. Object.defineProperty(obj, prop, descriptor)</h2>
+    <p>
+        let obj = {};
+        Object.defineProperty(obj, "property1", {
+            value: 42,
+            writable: false,
+            enumerable: true,
+            configurable: false
+        });
+        console.log(obj.property1); // 42
+        obj.property1 = 24;
+        console.log(obj.property1); // 42
+    </p>
+
+    <h2>4. Object.getOwnPropertyDescriptor(obj, prop)</h2>
+    <p>
+        let obj = { property1: 42, property2: "hello" };
+        let descriptor = Object.getOwnPropertyDescriptor(obj, "property1");
+        console.log(descriptor.value); // 42
+        console.log(descriptor.writable); // false
+        console.log(descriptor.enumerable); // true
+        console.log(descriptor.configurable); // false
+    </p>
+
+    <h2>5. Object.keys(obj)</h2>
+    <p>
+        let obj = { a: 1, b: 2, c: 3 };
+        let keys = Object.keys(obj);
+        console.log(keys); // ["a", "b", "c"]
+    </p>
+
+    <h2>6. Object.values(obj)</h2>
+    <p>
+        let obj = { a: 1, b: 2, c: 3 };
+        let values = Object.values(obj);
+        console.log(values); // [1, 2, 3]
+    </p>
+
+    <h2>7. Object.entries(obj)</h2>
+    <p>
+        let obj = { a: 1, b: 2, c: 3 };
+        let entries = Object.entries(obj);
+        console.log(entries); // [["a", 1], ["b", 2], ["c", 3]]
+    </p>
+
+    <h2>8. Object.fromEntries(entries)</h2>
+    <p>
+        let entries = [["a", 1], ["b", 2], ["c", 3]];
+        let obj = Object.fromEntries(entries);
+        console.log(obj); // { a: 1, b: 2, c: 3 }
+    </p>
+
+    <h1>Match</h1>
+
+    <h2>1. RegExp.prototype.exec(string)</h2>
+    <p>
+        let str = "Hello, World!";
+        let pattern = /world/i;
+        let result = pattern.exec(str);
+        console.log(result); // ["World", "world", index: 6, input: "Hello, World!"]
+    </p>
+
+    <h2>2. String.prototype.match(regexp)</h2>
+    <p>
+        let str = "Hello, World!";
+        let pattern = /world/i;
+        let result = str.match(pattern);
+        console.log(result); // ["World", index: 6, input: "Hello, World!"]
+    </p>
+
+    <h2>3. String.prototype.search(regexp)</h2>
+    <p>
+        let str = "Hello, World!";
+        let pattern = /world/i;
+        let result = str.search(pattern);
+        console.log(result); // 6
+    </p>
+
+    <h2>4. String.prototype.replace(regexp, replacement)</h2>
+    <p>
+        let str = "Hello, World!";
+        let pattern = /world/i;
+        let result = str.replace(pattern, "Universe");
+        console.log(result); // Hello, Universe!
+    </p>
+
+    <h2>5. String.prototype.split(separator, limit)</h2>
+    <p>
+        let str = "Hello, World!";
+        let pattern = /, /;
+        let result = str.split(pattern, 2);
+        console.log(result); // ["Hello", "World!"]
+    </p>
+
+    <h1>String</h1>
+
+    <h2>1. String.prototype.charAt(index)</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.charAt(0)); // H
+    </p>
+
+    <h2>2. String.prototype.charCodeAt(index)</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.charCodeAt(0)); // 72
+    </p>    
+
+    <h2>3. String.prototype.concat(...strings)</h2>
+    <p>
+        let str1 = "Hello, ";
+        let str2 = "World!";
+        let result = str1.concat(str2);
+        console.log(result); // Hello, World!
+    </p>
+
+
+    <h2>4. String.prototype.includes(searchString[, position])</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.includes("World")); // true
+        console.log(str.includes("world")); // true
+        console.log(str.includes("World", 6)); // false
+    </p>
+
+    <h2>5. String.prototype.indexOf(searchString[, position])</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.indexOf("World")); // 6
+        console.log(str.indexOf("world")); // -1
+        console.log(str.indexOf("World", 7)); // -1
+    </p>
+
+    <h2>6. String.prototype.lastIndexOf(searchString[, position])</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.lastIndexOf("World")); // 12
+        console.log(str.lastIndexOf("world")); // -1
+        console.log(str.lastIndexOf("World", 11)); // 6
+    </p>
+
+    <h2>7. String.prototype.slice(beginIndex[, endIndex])</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.slice(6)); // World!
+        console.log(str.slice(0, 5)); // Hello
+        console.log(str.slice(-3)); // rld
+    </p>
+
+    <h2>8. String.prototype.substring(beginIndex[, endIndex])</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.substring(6)); // World!
+        console.log(str.substring(0, 5)); // Hello
+        console.log(str.substring(-3)); // Undef
+    </p>
+
+    <h2>9. String.prototype.toLowerCase()</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.toLowerCase()); // hello, world!
+    </p>
+
+    <h2>10. String.prototype.toUpperCase()</h2>
+    <p>
+        let str = "Hello, World!";
+        console.log(str.toUpperCase()); // HELLO, WORLD!
+    </p>
+
+    <h2>11. String.prototype.trimStart()</h2>
+    <p>
+        let str = "  Hello, World!  ";
+        console.log(str.trimStart()); // Hello, World! 
+    </p>
+
+    <h2>12. String.prototype.trimEnd()</h2>
+    <p>
+        let str = "  Hello, World!  ";
+        console.log(str.trimEnd()); //  Hello, World
+    </p>
+
+    <h2>13. String.prototype.repeat(count)</h2>
+    <p>
+        let str = "Hello, ";
+        console.log(str.repeat(3)); // Hello, Hello, Hello, 
+    </p>
+
+    <h2>14. String.prototype.padStart(maxLength[, fillString])</h2>
+    <p>
+        let str = "Hello";
+        console.log(str.padStart(10, "-")); // -----Hello
+    </p>
+
+    <h2>15. String.prototype.padEnd(maxLength[, fillString])</h2>
+    <p>
+        let str = "Hello";
+        console.log(str.padEnd(10, "-")); // Hello-----
+    </p>
+
+    <h2>16. String.prototype.trimLeft()</h2>
+    <p>
+        let str = "  Hello, World!  ";
+        console.log(str.trimLeft()); // Hello, World! 
+    </p>
+
+    <h2>17. String.prototype.trimRight()</h2>
+    <p>
+        let str = "  Hello, World!  ";
+        console.log(str.trimRight()); //  Hello, World
+    </p>
+
+    
+
+
+</body>
+
+</html>

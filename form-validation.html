@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+         body {
+        font-family: "Times New Roman", Times, serif;
+        box-sizing: border-box;
+        background-image: url(https://www.codenameone.com/img/blog/css-header.jpg);
+        background-size: cover;
+        z-index: -1;
+        animation: animation 15s linear infinite alternate;
+    }
+
+    @keyframes animation {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: -100% 0;
+        }
+    }
+    /* .container {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container::before {
+    content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7); 
+} */
+    </style>
+</head>
+
+<body class="container mt-5">
+     <!-- Contenu de la navbar -->
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+        <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" aria-current="page" href="index.html">
+                Introduction to JavaScript
+            </a>
+        </li>
+       
+       
+        <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="calculator.html">
+                Calculators
+            </a>
+        </li>
+        <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="form-validation.html">
+                Form
+            </a>
+        </li>
+        <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="date.html">
+                My Schedule
+            </a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold dropdown-toggle" href="#" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Learn more
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="controleflow.html">JavaScript Control Flow</a></li>
+                <li><a class="dropdown-item" href="exercice.html">JavaScript Assignment</a></li>
+                <li><a class="dropdown-item" href="fonction-assignment.html">Retirement by JS 2</a></li>
+                <li><a class="dropdown-item" href="function-civil-worker.html">Retirement by JS 2</a></li>
+                <li><a class="dropdown-item" href="js-display.html">JS Display</a></li>
+                <li><a class="dropdown-item" href="kewords.html">JS Keywords</a></li>
+                <li><a class="dropdown-item" href="variables.html">JS Variables</a></li>
+                <li><a class="dropdown-item" href="jshours.html">Click to see Time</a></li>
+                <li><a class="dropdown-item" href="datatype-methods.html">Click to see Time</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+
+    <div class="card p-4 shadow-lg justify-content-center align-items-center bg-transparent">
+        <h1 class="text-center">Create your account</h1>
+        <p class="text-center">Already have an account? <a href="#">Log in</a></p>
+        <hr>
+        <h5>Account Details</h5>
+
+        <form name="myforme" method="get">
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Create a Username</label>
+                <input type="text" class="form-control bg-light" id="username" name="name" placeholder="Enter your name">
+                <span id="nameError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="useremail" class="form-label">Enter your Email</label>
+                <div class="input-group">
+                    <input type="email" class="form-control bg-light" id="useremail" name="email"
+                        placeholder="Enter your email">
+                    <span class="input-group-text"><i class="bi bi-exclamation-circle-fill text-warning"></i></span>
+                </div>
+                <span id="emailError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="userpassword" class="form-label">Confirm Password</label>
+                <div class="input-group">
+                    <input type="password" class="form-control bg-light" id="userpassword" name="confirm"
+                        placeholder="Confirm your password">
+                    <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
+                </div>
+                <span id="confirmError" class="text-danger"></span>
+            </div>
+
+            <hr>
+            <div class="p-0 m-0 muted text-danger" style="font-size: 12px; line-height: 1px;">
+                <p id="span1"><i class="bi bi-exclamation-circle-fill text-danger fs-5"></i> Minimum length 7 characters</p>
+                <p id="span2"><i class="bi bi-exclamation-circle-fill text-danger fs-5"></i> Must contain 1 number/symbol</p>
+                <p id="span3"><i class="bi bi-exclamation-circle-fill text-danger fs-5"></i> Must contain 1 letter</p>
+            </div>
+
+            <button type="submit" class="btn btn-success sm rounded-5">Create My Account <i
+                    class="bi bi-arrow-right-circle-fill"></i></button>
+        </form>
+    </div>
+
+    <script>
+        const userNameRegex = /^[a-zA-Z]+$/;
+        const userPasswordRegex = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).{7,}$/;
+        const userEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let message;
+        function personName() {
+            let userName = document.getElementById("username").value;
+            let nameError = document.getElementById('nameError');
+
+            if (userName === '' || !userNameRegex.test(userName)) {
+                nameError.innerText = 'Name is required and must contain only letters';
+                document.getElementById('username').style.border = '2px solid red';
+                message= false;
+            } else if (userName.length > 15) {
+                nameError.innerText = 'Name must be less than 15 characters';
+                document.getElementById('username').style.border = '2px solid red';
+                message= false;
+            } else {
+                nameError.innerText = '';
+                document.getElementById('username').style.border = '';
+                message= true;
+            }
+        }
+
+        function personPassword1() {
+            let userPassword = document.getElementById("userpassword").value;
+            let passwordError = document.getElementById('confirmError');
+
+            if (userPassword === '') {
+                passwordError.innerText = 'Password cannot be empty';
+                document.getElementById('userpassword').style.border = '2px solid red';
+                message= false;
+            } else if (!userPasswordRegex.test(userPassword)) {
+                passwordError.innerText = 'Password must contain at least one letter, one number, and one special character';
+                document.getElementById('userpassword').style.border = '2px solid red';
+                message= false;
+            }else if (userPassword.length < 7 || userPassword.length > 10){
+                passwordError= 'password must have 7 characters and less than 10 characters'
+                document.getElementById('userpassword').style.border = '2px solid red';
+        }  else {
+                passwordError.innerText = '';
+                document.getElementById('userpassword').style.border = '';
+                message= true;
+            }
+        }
+        function personEmail() {
+            let userEmail = document.getElementById("useremail").value.trim();
+            let emailError = document.getElementById('emailError');
+
+            if (userEmail === '' || !userEmailRegex.test(userEmail)) {
+                emailError.innerText = 'A valid email is required';
+                document.getElementById('useremail').style.border = '2px solid red';
+                message= false;
+            } else {
+                emailError.innerText = '';
+                document.getElementById('useremail').style.border = '';
+                message= true;
+            }
+        }
+
+        myforme.addEventListener('submit', function (event) {
+        event.preventDefault();
+        message = true
+        personName();
+        personPassword1();
+        personPassword2();
+        personEmail();
+
+        if (message) {
+            document.querySelector('body').innerHTML = ' <h1>Form submitted successfully! </h2>'
+            document.querySelector('body').style.color = 'green'
+        };
+    });
+
+    </script>
+</body>
+
+</html>
