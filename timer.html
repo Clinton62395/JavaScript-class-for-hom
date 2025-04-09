@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Compte à rebours Tabaski</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fef9f2;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #3e3e3e;
+    }
+    .countdown {
+      font-size: 30px;
+      margin-top: 20px;
+      background: #ffe4c4;
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .message {
+      font-size: 35px;
+      color: green;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⏳ Compte à rebours jusqu'à la Tabaski 2025 🐏</h1>
+
+  <div class="countdown" id="countdown">
+    <span id="days">00</span> jours,
+    <span id="hours">00</span> heures,
+    <span id="minutes">00</span> minutes,
+    <span id="seconds">00</span> secondes
+  </div>
+
+  <div class="message" id="message"></div>
+
+  <script>
+    // Date de la fête de Tabaski (ex : 8 juin 2025 à minuit)
+    const tabaskiDate = new Date('2025-06-08T00:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = tabaskiDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById('countdown').style.display = 'none';
+        document.getElementById('message').innerText = "🎉 Aujourd'hui, c'est la fête de Tabaski ! 🐏🕌";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+      const seconds = Math.floor((timeLeft / 1000) % 60);
+
+      document.getElementById('days').innerText = days;
+      document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    // Mise à jour chaque seconde
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // appel immédiat au chargement
+  </script>
+
+</body>
+</html>

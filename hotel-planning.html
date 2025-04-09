@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Planning </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgba(153, 50, 204, 0.432);
+        }
+
+        .parent {
+            background-color: #ffae;
+            color: darkblue;
+            text-align: center;
+            padding: 10px;
+            margin: 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .parent>div {
+            margin: 0 auto;
+            width: 450px;
+            height: 500px;
+            border: 1px solid green;
+            border-radius: 10px;
+        }
+
+        label {
+            font-size: 20px;
+            color: black;
+            font-weight: bolder;
+
+        }
+
+        button {
+            background-color: bisque;
+            width: 100px;
+            padding: 10px;
+            border-radius: 40px;
+            box-sizing: content-box;
+            color: black;
+        }
+
+        button:hover {
+            background-color: rgba(22, 13, 1, 0.034);
+            color: blue;
+            text-decoration: underline;
+            font-size: 15px;
+            border: 2px ridge green;
+            font-weight: bolder;
+        }
+
+        .btn-accomodation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn-accomodation>span>button {
+            width: 80%;
+            margin: 10px;
+            margin-top: 50px;
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: blue;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+
+        }
+
+        .first-para {
+            font-size: 20px;
+            border: 1px solid gray;
+            border-radius: 50px;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            margin: 0 auto;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.281);
+        }
+
+        #username,
+        #userlastname {
+            border: none;
+            border-bottom: 1px solid green;
+            background-color: inherit;
+            border-radius: 0;
+        }
+
+        #showName,
+        #usernameShown {
+
+            font-size: 20px;
+            border: 1px ridge gray;
+            border-radius: 30px;
+            width: 80%;
+            padding: 10px;
+            text-align: center;
+            margin: 10px auto;
+            text-transform: uppercase;
+            color: black;
+            background-color: rgba(235, 181, 181, 0.281);
+
+        }
+
+        select {
+            padding: 15px;
+            background-color: black;
+            color: wheat;
+            font-size: 20px;
+            width: 300px;
+            border-radius: 10px;
+
+        }
+
+        input[type='date'] {
+            width: 300px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 20px;
+
+        }
+
+        /* hide all div and display them by javascript */
+        .hidden-div {
+            display: none;
+
+        }
+
+        #expiredMessage {
+            background-color: black;
+            color: wheat;
+            font-size: 25px;
+            text-align: center;
+            margin: 10px auto;
+            font-weight: bold;
+            text-indent: 30px;
+            line-height: 1.5;
+
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- My navbar for my differents pages -->
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light py-1">
+        <div class="container-fluid">
+            
+            <!-- Bouton pour mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Contenu de la navbar -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" aria-current="page" href="index.html">
+                            Introduction to JavaScript
+                        </a>
+                    </li>
+                   
+                   
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="calculator.html">
+                            Calculators
+                        </a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="form-validation.html">
+                            Form
+                        </a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="date.html">
+                            My Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold" href="hotel-planning.html">
+                            Hotel Fees
+                        </a>
+                    </li>
+    
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown m-3">
+                        <a class="nav-link active text-primary fs-3 fw-bold dropdown-toggle" href="#" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn more
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="controleflow.html">JavaScript Control Flow</a></li>
+                            <li><a class="dropdown-item" href="exercice.html">JavaScript Assignment</a></li>
+                            <li><a class="dropdown-item" href="fonction-assignment.html">Retirement by JS 2</a></li>
+                            <li><a class="dropdown-item" href="function-civil-worker.html">Retirement by JS 2</a></li>
+                            <li><a class="dropdown-item" href="js-display.html">JS Display</a></li>
+                            <li><a class="dropdown-item" href="kewords.html">JS Keywords</a></li>
+                            <li><a class="dropdown-item" href="variables.html">JS Variables</a></li>
+                            <li><a class="dropdown-item" href="jshours.html">Click to see Time</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="parent">
+        <div id="Welcome-div">
+            <h1>Welcome</h1>
+            <p class="first-para">Provide your name</p>
+            <label for="name">First Name</label> <br>
+            <input type="text" name="name" id="username"><br><br>
+            <span id="nameError" style="color: red;"></span> <br>
+
+            <label for="last-name">Last Name</label> <br>
+            <input type="text" name="name" id="userlastname"><br><br>
+            <span id="lasnameError" style="color: red;"></span> <br>
+
+            <button id="btnNext">Next</button>
+        </div>
+
+        <div class="hidden-div hidden-div1">
+            <h3 id="usernameShown"></h3>
+
+            <h2>Type of accomodation</h2>
+            <h2 id="accommodationMessage"></h2>
+            <div class="btn-accomodation">
+                <span id="freebtn"><button>Free accomodation</button></span>
+                <span id="hotelbtn"><button>Hotel accomodation</button></span>
+            </div>
+        </div>
+
+        <div class="hidden-div hidden-div2">
+            <h3 id="showName"></h3>
+            <p>Choose the day you will be leaving</p>
+            <input type="date" name="date" id="date"><br>
+
+            <span id="errorMessage" style="color: red;"></span><br>
+
+
+            <p>Select room type</p>
+            <select name="select-type-of-room" id="select">
+                <option value="0" selected>0</option>
+                <option value="standar N5000">standar N5000</option>
+                <option value="Emirald N15000">Emirald N15000</option>
+                <option value="Supreme N25000">Supreme N25000</option>
+                <option value="Presidential N40000">Presidential N40000</option>
+            </select><br><br>
+
+            <button id="confirmbtn">confirme</button>
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="hidden-div hidden-div3">
+            <p id="expiredMessage"></p>
+
+            <button id="Cancelbtn">Cancel</button>
+            <button id="continuebtn">continue</button>
+        </div>
+
+        <div class="hidden-div hidden-div4">
+            <h2>Your rent expire In:</h2>
+            <h2>
+                <span id="hour">00 :</span>
+                <span id="minute">00 :</span>
+                <span id="second">00</span>
+            </h2>
+            <p id="expiredTime"></p>
+            <button id="startbtn">Start</button>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        // JavaScript
+        let btnNext = document.getElementById('btnNext');
+        let usernameRegex = /^[A-Z]+$/i;
+
+        function validateInput() {
+            let username = document.getElementById('username').value.trim();
+            let userlastname = document.getElementById('userlastname').value.trim();
+
+            let nameError = '';
+            let lastnameError = '';
+
+            if (username === '') {
+                nameError = 'First name is required';
+            } else if (!username.match(usernameRegex)) {
+                nameError = 'Only letters are allowed';
+            } else {
+                nameError = '✅';
+            }
+
+            if (userlastname === '') {
+                lastnameError = 'Last name is required';
+            } else if (!userlastname.match(usernameRegex)) {
+                lastnameError = 'Only letters are allowed';
+            } else if (username === userlastname) {
+                lastnameError = '❌ Last name must be different from the first name';
+            } else {
+                lastnameError = '✅';
+            }
+
+            document.getElementById('nameError').innerText = nameError;
+            document.getElementById('lasnameError').innerText = lastnameError;
+
+            return nameError === '✅' && lastnameError === '✅';
+        }
+
+        btnNext.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (validateInput()) {
+                document.getElementById('Welcome-div').style.display = 'none';
+                document.querySelector('.hidden-div1').style.display = 'block';
+                document.getElementById('usernameShown').innerText =
+                    `Welcome, ${document.getElementById('username').value} ${document.getElementById('userlastname').value}`;
+            }
+        });
+
+        document.getElementById('username').addEventListener('input', validateInput);
+        document.getElementById('userlastname').addEventListener('input', validateInput);
+
+
+        let freeBtn = document.getElementById('freebtn');
+        let hotelBtn = document.getElementById('hotelbtn');
+        let freeBtnMessage;
+
+
+        freeBtn.addEventListener('click', () => {
+            const freeBtnMessage = 'Thank you for choosing us, we will be looking for a free hotel for you, see you!';
+            document.getElementById('accommodationMessage').textContent = freeBtnMessage;
+            hotelBtn.style.display = 'none';
+
+        });
+
+        hotelBtn.addEventListener('click', () => {
+            document.querySelector('.hidden-div1').style.display = 'none';
+            let errorMessage = document.getElementById('errorMessage');
+            document.querySelector('.hidden-div2').style.display = 'block'
+            document.getElementById('showName').innerText = `welcome back, ${document.getElementById('username').value} ${document.getElementById('userlastname').value}`
+
+        });
+
+        let confirmBtn = document.getElementById('confirmbtn');
+
+        function confirmAcommodation() {
+            let dateValue = document.getElementById('date').value;
+            let selectValue = document.getElementById('select').value;
+            let errorMessage = document.getElementById('errorMessage');
+
+            errorMessage.innerText = '';
+
+            if (!dateValue) {
+                errorMessage.innerText = 'Time accommodation is required.';
+                return false;
+            }
+
+            if (selectValue === '0') {
+                errorMessage.innerText = 'You must select one of the types of hotel.';
+                return false;
+            }
+
+            // Calcul du prix
+            let selectedDate = new Date(dateValue);
+            let today = new Date();
+            let duration = Math.ceil((selectedDate - today) / (1000 * 60 * 60 * 24)); // nombre de jours
+            let match = selectValue.match(/\d+/);
+            let pricePerNight = match ? parseInt(match[0]) : 0;
+
+            let totalPrice = duration * pricePerNight;
+
+            // document.getElementById('errorMessage').innerText =
+            //     `✅ Booking confirmed! Duration: ${duration} days | Price per night: ${pricePerNight} | Total: ₦${totalPrice}`;
+
+            document.querySelector('.hidden-div3').style.display = 'block';
+
+            document.getElementById('expiredMessage').innerText = `✅ Booking confirmed! Duration: ${duration} days | Price per night: ${pricePerNight} | Total: ₦${totalPrice}`;
+
+            return true;
+        }
+        confirmBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const success = confirmAcommodation();
+
+            if (success) {
+                document.getElementById('errorMessage').innerText = '✅ Booking confirmed'
+                document.getElementById('errorMessage').style.color = 'green'
+                document.querySelector('.hidden-div2').style.display = 'none';
+                document.querySelector('.hidden-div3').style.display = 'block';
+
+                document.getElementById('expiredMessage').innerText = `the days you chooise is ${duration} night price is ${pricePerNight} according to your days, you should pay ${totalPrice}`
+            }
+        });
+
+        let CancelBtn = document.getElementById('Cancelbtn');
+        let continueBtn = document.getElementById('continuebtn');
+        let startBtn = document.getElementById('startbtn');
+
+
+        let displayDiv4 = document.querySelector('.hidden-div4');
+
+        CancelBtn.addEventListener('click', () => {
+            document.getElementById('expiredMessage').innerText = ''
+            document.querySelector('.hidden-div3').style.display = 'none';
+
+            displayDiv4.style.display = 'block';
+            const messageThank = document.getElementById('expiredTime');
+            messageThank.innerText = 'Thank you, you can book anytime you want.';
+
+            startBtn.style.display = 'none'
+
+        })
+
+        continueBtn.addEventListener('click', () => {
+            document.querySelector('.hidden-div3').style.display = 'none';
+            document.getElementById('expiredMessage').innerText = ''
+            document.querySelector('.hidden-div4').style.display = 'block';
+            startBtn.style.display = 'block'
+
+
+        })
+
+
+        let k;
+        startBtn.addEventListener('click', () => {
+            let minouput = document.getElementById('minute');
+            let secondouput = document.getElementById('second');
+            let hourTimer = document.getElementById('hour');
+            let inicount = 0;
+
+            function countEngine() {
+                inicount++;
+                let min = parseInt(inicount / 60);
+                let sec = parseInt(inicount % 60);
+                let hour = parseInt(inicount /3600);
+
+                // format 00
+                min = (min < 10) ? '0' + min : min;
+                sec = (sec < 10) ? '0' + sec : sec;
+                hour = (hour < 10) ? '0' + hour : hour;
+
+                minouput.innerHTML = min;
+                secondouput.innerHTML = sec;
+                hourTimer.innerHTML = hour;
+
+                // if (min >= 1) {
+                //     clearInterval(k);
+                //     alert('⛔Oops, Dear Passenger, your time has expired');
+                // }
+            }
+
+            function count() {
+              if(!k){
+                  k = setInterval(countEngine, 1000);
+              }   
+            }
+
+            count()
+        })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

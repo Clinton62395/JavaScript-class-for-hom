@@ -75,6 +75,11 @@
                 My Schedule
             </a>
         </li>
+        <li class="nav-item m-3">
+            <a class="nav-link active text-primary fs-3 fw-bold" href="hotel-planning.html">
+                Hotel Fees
+            </a>
+        </li>
 
         <!-- Dropdown -->
         <li class="nav-item dropdown m-3">
@@ -100,17 +105,17 @@
 </div>
 </nav>
 
-    <div class="card p-4 shadow-lg justify-content-center align-items-center bg-transparent">
+    <div class="card p-2 w-50 shadow-lg justify-content-center align-items-center bg-transparent">
         <h1 class="text-center">Create your account</h1>
         <p class="text-center">Already have an account? <a href="#">Log in</a></p>
         <hr>
         <h5>Account Details</h5>
 
-        <form name="myforme" method="get">
+        <form name="myforme" class="w-50 mb-3" method="get" action="">
 
             <div class="mb-3">
                 <label for="username" class="form-label">Create a Username</label>
-                <input type="text" class="form-control bg-light" id="username" name="name" placeholder="Enter your name">
+                <input type="text" class="form-control bg-light" id="username" name="name" placeholder="Enter your name" onchange="personName()">
                 <span id="nameError" class="text-danger"></span>
             </div>
 
@@ -118,7 +123,7 @@
                 <label for="useremail" class="form-label">Enter your Email</label>
                 <div class="input-group">
                     <input type="email" class="form-control bg-light" id="useremail" name="email"
-                        placeholder="Enter your email">
+                        placeholder="Enter your email" onchange="personEmail() ">
                     <span class="input-group-text"><i class="bi bi-exclamation-circle-fill text-warning"></i></span>
                 </div>
                 <span id="emailError" class="text-danger"></span>
@@ -128,7 +133,7 @@
                 <label for="userpassword" class="form-label">Confirm Password</label>
                 <div class="input-group">
                     <input type="password" class="form-control bg-light" id="userpassword" name="confirm"
-                        placeholder="Confirm your password">
+                        placeholder="Confirm your password" onchange="personPassword1()">
                     <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
                 </div>
                 <span id="confirmError" class="text-danger"></span>
@@ -151,11 +156,12 @@
         const userPasswordRegex = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).{7,}$/;
         const userEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         let message;
+
         function personName() {
             let userName = document.getElementById("username").value;
             let nameError = document.getElementById('nameError');
 
-            if (userName === '' || !userNameRegex.test(userName)) {
+            if (userName == '' || !userNameRegex.match(userName)) {
                 nameError.innerText = 'Name is required and must contain only letters';
                 document.getElementById('username').style.border = '2px solid red';
                 message= false;
@@ -178,24 +184,29 @@
                 passwordError.innerText = 'Password cannot be empty';
                 document.getElementById('userpassword').style.border = '2px solid red';
                 message= false;
-            } else if (!userPasswordRegex.test(userPassword)) {
+            } else if (!userPasswordRegex.match(userPassword)) {
                 passwordError.innerText = 'Password must contain at least one letter, one number, and one special character';
                 document.getElementById('userpassword').style.border = '2px solid red';
                 message= false;
             }else if (userPassword.length < 7 || userPassword.length > 10){
                 passwordError= 'password must have 7 characters and less than 10 characters'
                 document.getElementById('userpassword').style.border = '2px solid red';
-        }  else {
+        } 
+        
+        else {
                 passwordError.innerText = '';
                 document.getElementById('userpassword').style.border = '';
                 message= true;
+                document.getElementById('span1').style.color='green'
             }
-        }
+        } 
+
+
         function personEmail() {
             let userEmail = document.getElementById("useremail").value.trim();
             let emailError = document.getElementById('emailError');
 
-            if (userEmail === '' || !userEmailRegex.test(userEmail)) {
+            if (userEmail === '' || !userEmailRegex.match(userEmail)) {
                 emailError.innerText = 'A valid email is required';
                 document.getElementById('useremail').style.border = '2px solid red';
                 message= false;
@@ -215,7 +226,7 @@
         personEmail();
 
         if (message) {
-            document.querySelector('body').innerHTML = ' <h1>Form submitted successfully! </h2>'
+            document.querySelector('body').innerHTML = ' <h1>Form submitted successfully! </h2> '
             document.querySelector('body').style.color = 'green'
         };
     });
